@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>&nbsp&nbsp&nbspSl</th>
+                <th>&nbsp&nbsp&nbsp&nbspBook Name</th>
+                <th>&nbsp&nbsp&nbsp&nbspAction</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>&nbsp&nbsp&nbsp{{forloop.counter}}</td>
+                    <td>&nbsp&nbsp&nbsp&nbsp{{ book.book_name }}</td>
+                    <td>&nbsp&nbsp&nbsp&nbsp<a href="#">Click here</a>
+                        &nbsp&nbsp<a class="delete-button" href="{% url 'del' book.id %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

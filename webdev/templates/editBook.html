@@ -1,0 +1,32 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="book_name">Book Name:</label>
+      <input type="text" class="form-control" id="book_name" name="book_name" required>
+    </div>
+    <div class="form-group">
+      <label for="publisher_name">Publisher Name:</label>
+      <input type="text" class="form-control" id="publisher_name" name="publisher_name" required>
+    </div>
+    <div class="form-group">
+      <label for="publisher_age">Publisher Age:</label>
+      <input type="number" class="form-control" id="publisher_age" name="publisher_age" required>
+    </div>
+    <div class="form-group">
+      <label for="page_number">Page Number:</label>
+      <input type="number" class="form-control" id="page_number" name="page_number" required>
+    </div>
+    <div class="form-group">
+      <label for="publish_date">Publish Date:</label>
+      <input type="date" class="form-control" id="publish_date" name="publish_date" required>
+    </div>
+    <div>
+      <label for="Sci-Fi">Sci-Fi</label>
+      <input type="checkbox" id="Sci-Fi" name="Sci-Fi" value="Sci-Fi"><br>
+      <label class="form-check-input" for="Drama">Drama</label>
+      <input type="checkbox" id="Drama" name="Drama" value="Drama"><br>
+      <label class="form-check-input" for="Novel">Novel</label>
+      <input type="checkbox" id="Novel" name="Novel" value="Novel"><br>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
